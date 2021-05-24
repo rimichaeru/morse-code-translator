@@ -1,0 +1,48 @@
+* { 
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  .title {
+    padding: 20px 0;
+  }
+
+  .input {
+    padding: 20px;
+    resize: none;
+    border-radius: 6px;
+  }
+
+  .btn {
+    border-radius: 4px;
+    background-color: rgba(0, 255, 255, 0.589);
+
+    &:hover {
+      background-color: rgba(62, 255, 255, 0.301);
+    }
+  }
+
+  .radio {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .output {
+    padding: 20px;
+  }
+  
+}
