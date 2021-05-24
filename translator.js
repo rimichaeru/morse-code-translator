@@ -182,7 +182,8 @@ const getSingleLetter = (singleInput) => {
 
 
 export const translateEnglishToMorse = (engString) => {
-  const engArr = engString.toLowerCase().split("");
+  const formattedEngString = engString.match(/[a-z\s]/gi).join("");
+  const engArr = formattedEngString.toLowerCase().split("");
   const morseArr = engArr.map((singleLetter) => {
     return getSingleMorse(singleLetter) + " ";
   })

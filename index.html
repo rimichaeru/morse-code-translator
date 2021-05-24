@@ -6,24 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Morse Code Translator</title>
   <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap" rel="stylesheet"> 
 </head>
 <body>
   <div class="container">
     <h1 class="title">English <> Morse Translator</h1>
-    <textarea class="input" placeholder="Enter words to translate here!" autofocus rows="5" wrap ></textarea>
+    <div class="speech">
+      <button class="speak">Speak</button>
+      <input type="checkbox" name="speech" id="speech-checkbox">
+      <label for="speech">Text-to-Speech?</label>
+    </div>
+    <textarea class="input" placeholder="Enter your words to translate here!" autofocus rows="5" wrap ></textarea>
     <button class="btn">Translate Now!</button>
 
     <div class="radio">
       <div class="radio__etm">
-        <input type="radio" name="FromTo" class="from-to" value="etm" id="etm">
+        <input type="radio" name="FromTo" class="from-to" value="etm" id="etm" checked>
         <label for="etm">English > Morse</label>
       </div>
       <div class="radio__mte">
         <input type="radio" name="FromTo" class="from-to" value="mte" id="mte">
-        <label for="mte">Morse > Englsih</label>
+        <label for="mte">Morse > English</label>
       </div>
     </div>
-    <p class="output"></p>
+    <textarea class="output" readonly placeholder="Your results!"></textarea>
   </div>
 
   <script src="./script.js" type="module"></script>
