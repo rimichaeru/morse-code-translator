@@ -9,4 +9,4 @@ Main Features:
  - Placeholder information which also advises of incorrect input
 
 
-Includes an attractive baby blue aeshetic.
+Includes an attractive baby blue aesthetic.
