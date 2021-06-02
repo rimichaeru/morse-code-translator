@@ -36,7 +36,15 @@ body {
     height: 30px;
 
     &:hover {
-      background-color: rgba(62, 255, 255, 0.301);
+      background-color: rgba(49, 255, 255, 0.24);
+    }
+  }
+
+  #clear {
+    background-color: rgba(0, 195, 255, 0.829);
+
+    &:hover {
+      background-color: rgba(255, 62, 62, 0.575);
     }
   }
 
