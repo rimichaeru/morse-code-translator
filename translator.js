@@ -82,6 +82,15 @@ const getSingleMorse = (singleInput) => {
     case " ":
       return "/";
       break;
+    case ".":
+      return ".-.-.-";
+      break;
+    case "!":
+      return "-.-.--";
+      break;
+    case "?":
+      return "..--..";
+      break;
     
     
     default:
@@ -172,6 +181,15 @@ const getSingleLetter = (singleInput) => {
     case "/":
       return " ";
       break;
+    case ".-.-.-":
+      return ".";
+      break;
+    case "-.-.--":
+      return "!";
+      break;
+    case "..--..":
+      return "?";
+      break;
     
     default:
       break;
@@ -200,7 +218,11 @@ export const translateMorseToEnglish = (morseString) => {
     return getSingleLetter(singleMorse);
   })
 
-  const engString = engArr.join("");
+  let engString = engArr.join("");
+
+  if (engString.charAt(engString.length-1) == "." || engString.charAt(engString.length-1) == "!" || engString.charAt(engString.length-1) == "?") {
+    engString = engString.charAt(0).toUpperCase() + engString.slice(1);
+  }
 
   return engString.trim();
 }
